@@ -8,10 +8,10 @@ rm -rf /usr/share/nginx/html/* &>>${LOG}
 
 echo -e "\e[36m Download Frontend Content\e[0m"
 curl -o /tmp/frontend.zip https://roboshop-artifacts.s3.amazonaws.com/frontend.zip &>>${LOG}
-cd /usr/share/nginx/html/ &>>{LOG}
+cd /usr/share/nginx/html/ &>>${LOG}
 
 echo -e "\e[36m Extract Frontend Content\e[0m"
-unzip /tmp/frontend.zip &>>{LOG}
+unzip /tmp/frontend.zip &>>${LOG}
 
 echo -e "\e[36m Copy Roboshop Nginx Config file\e[0m"
 cp ${script_location}/files/roboshop.conf /etc/nginx/default.d/roboshop.conf &>>${LOG}
