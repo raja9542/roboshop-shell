@@ -24,7 +24,7 @@ if [ $? -eq 0 ]; then
     FAILURE
 exit
     fi
-echo -e "Refer Log file for more information, Log- ${LOG}"
+echo -e "Refer Log file for more information,Log- ${LOG}"
 mkdir -p /app &>>${LOG}
 if [ $? -eq 0 ]; then
   echo SUCCESS
