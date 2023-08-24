@@ -16,6 +16,11 @@ if [ $? -eq 0 ]; then
     fi
 echo -e "\e[1;35m Add Application USER\e[0m"
 useradd roboshop &>>${LOG}
+if [ $? -eq 0 ]; then
+  echo SUCCESS
+  else
+    FAILURE
+    fi
 mkdir -p /app &>>${LOG}
 if [ $? -eq 0 ]; then
   echo SUCCESS
