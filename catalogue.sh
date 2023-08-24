@@ -6,7 +6,10 @@ print_head "Installing NOdeJS"
 yum install nodejs -y &>>${LOG}
 status_check
 print_head "Add Application USER"
+id roboshop &>>${LOG}
+if [ $? -ne 0 ]; then
 useradd roboshop &>>${LOG}
+fi
 status_check
 mkdir -p /app &>>${LOG}
 status_check
