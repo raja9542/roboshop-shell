@@ -25,9 +25,6 @@ if [ $? -ne 0 ]; then
 rabbitmqctl add_user roboshop ${roboshop_rabbitmq_password} &>>${LOG}
 fi
 status_check
-print_head "Add Tags to Application User"
-rabbitmqctl set_user_tags roboshop administrator &>>${LOG}
-status_check
 print_head "Add Permissions to Application User"
 rabbitmqctl set_permissions -p / roboshop ".*" ".*" ".*" &>>${LOG}
 status_check
