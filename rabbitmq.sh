@@ -20,7 +20,10 @@ print_head "Start Rabbitmq server"
 systemctl start rabbitmq-server
 status_check
 print_head "Add Application User"
+rabbitmqctl list_users | grep roboshop &>>${LOG}
+if [ $? -ne 0 ]; then
 rabbitmqctl add_user roboshop ${roboshop_rabbitmq_password} &>>${LOG}
+fi
 status_check
 print_head "Add Tags to Application User"
 rabbitmqctl set_user_tags roboshop administrator &>>${LOG}
