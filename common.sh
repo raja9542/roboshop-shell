@@ -157,6 +157,7 @@ print_head "Download the Dependencies."
   status_check
 
 print_head "Update Password in ${component} service file"
+sed -i -e "s/roboshop_rabbitmq_password/${roboshop_rabbitmq_password}/" ${script_location}/files/${component}.service
 status_check
 
 SYSTEMD_SETUP
