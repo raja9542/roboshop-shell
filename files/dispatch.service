@@ -7,6 +7,5 @@ Environment=AMQP_USER=roboshop
 Environment=AMQP_PASS=roboshop123
 ExecStart=/app/dispatch
 SyslogIdentifier=dispatch
-
 [Install]
 WantedBy=multi-user.target
