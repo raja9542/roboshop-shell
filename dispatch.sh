@@ -1,6 +1,6 @@
 source common.sh
 
-if [ -z "roboshop_rabbitmq_password" ]; then
+if [ -z "${roboshop_rabbitmq_password}" ]; then
   echo -e "Variable roboshop_rabbitmq_password is Needed"
   exit
 fi
