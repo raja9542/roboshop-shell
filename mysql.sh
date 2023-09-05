@@ -21,4 +21,7 @@ systemctl start mysqld  &>>${LOG}
 status_check
 print_head "Reset Default Database Password"
 mysql_secure_installation --set-root-pass ${root_mysql_password}
+if [ $? -eq 1 ]; then
+  echo -e "password already changed"
+fi
 status_check
