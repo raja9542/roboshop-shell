@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ##### Change these values ###
-ZONE_ID="Z08030091YSXTE2SLH9CL"
+ZONE_ID="Z065501325FJFN81ZOLOA"
 DOMAIN="devopsraja66.online"
 SG_NAME="Devops-1"
 env=dev
