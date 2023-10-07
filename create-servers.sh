@@ -3,7 +3,7 @@
 ##### Change these values ###
 ZONE_ID="Z065501325FJFN81ZOLOA"
 DOMAIN="devopsraja66.online"
-SG_NAME="Devops-1"
+SG_NAME="Devops"
 env=dev
 #############################
 
